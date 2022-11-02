@@ -7,7 +7,6 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -32,9 +31,6 @@ Users should be able to:
 
 (I know the hover animation here is not obvious to see for its color setting, that's the reason why color theory is important to designer and frontend developer.)
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 
 ## My process
 
@@ -97,7 +93,7 @@ In that case and other similar situations, we usually make the difference more v
 
 We don't need to set any properties to the child elements for they all been viewed as so automatically. But before we turn to next step, everything is no difference with the flow layout. 
 
-![](./README-pictures/flow example.png)
+![](./README-pictures/flow-example.png)
 
 For that reason, it's time to use another gird property to container element:
 
@@ -110,7 +106,7 @@ For that reason, it's time to use another gird property to container element:
 }
 ```
 
-![](./README-pictures/grid example.png)
+![](./README-pictures/grid-example.png)
 
 What's that mean? For the code above, its just saying "Well, now we apply grid and start from its columns. How many values put in that `grid-template-columns` property means according columns there are, and the value itself is each grid element could take over the space", that's why we see the second element go upstairs to fill the space that remain in first row what the third could not. Now, we know we could set the structure layout and size a element could take, then we can move to our goal:
 
@@ -137,7 +133,7 @@ What's that mean? For the code above, its just saying "Well, now we apply grid a
 }
 ~~~
 
-![](./README-pictures/span layout.png)
+![](./README-pictures/span-layout.png)
 
 This shows how creative the grid is, because of that we can achieve our component's structure in a smooth way.
 
@@ -158,7 +154,7 @@ When I working with two `<span>` tags (which is "$29" and "per month"), I encoun
 }
 ```
 
-![](./README-pictures/before vertical.jpg)
+![](./README-pictures/before-vertical.jpg)
 
 Once we set two `span` tags side by side with different font size and we also want to center them vertically in paragraph, I came up a solution like this:
 
@@ -192,7 +188,7 @@ Nothing happened after that. So there must be other ways to complete that goal. 
 */
 ```
 
-![](./README-pictures/after vertical.jpg)
+![](./README-pictures/after-vertical.jpg)
 
 #### Mobile-first workflow
 
