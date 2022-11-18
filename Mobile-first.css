@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* margin: 0 8%; */
+    padding: 0 8%;
+    background-color: var(--neutral-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* need to use vh unit to set the body the whole hight of the screen */
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    height: 100vh;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-white: hsl(0, 0%, 100%, 0.9);
+    --lighter-white: hsl(0, 0%, 100%, 0.6);
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+    --neutral-light-gray: hsl(204, 43%, 93%);
+    --neutral-lighter-gray: hsl(204, 43%, 93%, 0.6);
+    --neutral-lightest-gray: hsl(204, 43%, 93%, 0.5);
+    --neutral-grayish-blue: hsl(218, 22%, 67%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "upside"
+                         "lower-left-side"
+                         "lower-right-side";
+    color: var(--white);
+    /* use pixel as the last defener */
+    box-shadow: 0 0 15px 5px hsl(218, 22%, 67%, 0.45);
+    max-width: 500px;
+    border-radius: 1vh;
+}
+
+.upside, .lower-left-side, .lower-right-side {
+    padding: 8%;
+}
+
+h2 {
+    font-size: 1.13em;
+}
+
+/* The first part */
+.upside {
+    grid-area: upside;
+    padding-top: 9%;
+    /* change the font size use viewport height seems more resonable */
+    background-color: var(--white);
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+}
+
+.upside h1 {
+    color: var(--primary-cyan);
+    font-size: 1.5em;
+}
+
+.upside h2 {
+    color: var(--primary-bright-yellow);
+    margin: 8% 0;
+    /* font-size: 1.781vh; */
+}
+
+.upside p {
+    color: var(--neutral-grayish-blue);
+    line-height: 2em;
+    /* line-height: 3.1vh; */
+    margin-bottom: 2%;
+}
+
+/* The second part */
+.lower-left-side {
+    grid-area: lower-left-side;
+    background-color: var(--primary-cyan);
+}
+
+.lower-left-side h2 {
+    color: var(--light-white);
+}
+
+.lower-left-side .price {
+    margin: 5% 0 3% 0;
+}
+
+.money {
+    font-size: 2em;
+    /* font-size: 3.7vh; */
+    font-weight: 700;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.rate {
+    color: var(--neutral-lightest-gray);
+}
+
+.lower-left-side p:last-of-type {
+    color: var(--neutral-light-gray);
+}
+
+button {
+    font-family: "Karla", sans-serif;
+    background-color: var(--primary-bright-yellow);
+    color: var(--light-white);
+    margin-top: 10%;
+    width: 100%;
+    /* height: 30%; */
+    height: 5.5vh;
+    font-size: 1em;
+    /* font-size: 1.85vh; */
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 5px rgb(27, 114, 113, 0.3);
+}
+
+/* The third part */
+.lower-right-side {
+    grid-area: lower-right-side;
+    font-size: 0.9rem;
+    /* font-size: 1.65vh; */
+    background-color: #4abebd;
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+}
+
+.lower-right-side h2 {
+    margin-bottom: 8%;
+}
+
+ul {
+    list-style: none;
+    color: var(--lighter-white);
+}
+
+li {
+    padding: 0.5% 0;
+}
+
+@media screen and (width >= 1440px) {
+    .grid-container {
+        grid-template-areas: "upside upside"
+                             "lower-left-side lower-right-side";
+        grid-template-columns: repeat(2, 1fr);
+        /* The effect shows in picture should be 1440px */
+        max-width: 43vw;
+    }
+    .lower-left-side {
+        border-bottom-left-radius: 1vh;
+    }
+    .lower-right-side {
+        border-bottom-left-radius: 0;
+    }
+    .upside {
+        padding: 5% 7%;
+        font-size: 1.7vh;
+    }
+    .upside h2 {
+        margin: 4% 0 2% 0;
+    }
+    .upside p {
+        line-height: 1.7em;
+    }
+    .lower-left-side, .lower-right-side {
+        padding: 11.5%;
+    }
+    button {
+        transition: all .4s ease-in-out;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: #4abebd;
+        transition: all .4s ease-in-out;
+        transform: scale(1.1);
+    }
+}
